@@ -8,8 +8,10 @@ const PORT = 4000;
 
 // connection mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://mongo/CRMdb', {
-    useMongoClient: true
+mongoose.connect('mongodb://localhost/CRMdb', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+    // useMongoClient: true
 });
 
 // bodyparser
